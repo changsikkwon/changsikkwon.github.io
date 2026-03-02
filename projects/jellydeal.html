@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jellydeal - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2021.07 ~ 2021.11</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">jellydeal</h1>
+            <p class="detail-subtitle">대학생 후불결제(BNPL) 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django · DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">Celery · Redis</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">Iamport (KYC)</span>
+                <span class="detail-tag">SettleBank (PG)</span>
+                <span class="detail-tag">Mailgun · CoolSMS</span>
+                <span class="detail-tag">NCP 알림톡 · Firebase</span>
+                <span class="detail-tag">Cron · AES</span>
+                <span class="detail-tag">AWS (EB · RDS · S3)</span>
+                <span class="detail-tag">GitHub Actions</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>대학생을 대상으로 한 후불결제(BNPL, Buy Now Pay Later) 플랫폼입니다. 상품 구매 후 분할 납부하는 방식으로, 본인인증·대학생 인증·신용 심사·할부 결제·연체 관리·다채널 알림을 통합한 전사 운영 시스템입니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>학생 인증 시스템</strong> — Iamport 본인인증(KYC), 대학 이메일 인증, 재학증명서 업로드, 인턴 내역·어학성적·자격증 관리</li>
+                    <li><strong>심사 워크플로</strong> — 작성중·심사중·승인·재심사·반려 상태 관리, 반려사유 추적, 평균학점·월수입 기반 한도 산정</li>
+                    <li><strong>BNPL 결제 모델</strong> — 총 한도·후불 한도 관리, 분할 횟수·기본수수료·기간수수료 계산, 남은 한도 실시간 업데이트</li>
+                    <li><strong>SettleBank 분할결제</strong> — 할부 승인·취소·환불 API 연동, 결제 회차별 상태 관리 (대기·완료·실패·조기상환)</li>
+                    <li><strong>연체 자동 관리</strong> — Cron으로 공휴일 제외 연체 횟수 카운트, 4일 초과 시 연체 수수료 자동 계산·한도 차감, 결제 상태 (연체중·한도없음·가능) 자동 전환</li>
+                    <li><strong>다채널 알림</strong> — Mailgun 이메일, CoolSMS SMS, NCP 알림톡, Firebase 푸시, Django Signals로 자동 발송</li>
+                    <li><strong>주문·배송·리뷰</strong> — 주문 상태 워크플로, 택배사 관리, 리뷰·별점·이미지</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>Iamport 본인인증 통합</strong> — 본인인증 API 연동, 중복 체크, 인증 정보 검증</li>
+                    <li><strong>SettleBank 분할결제 연동</strong> — AES 암호화 및 Signature 생성, 승인·취소 API 연동, 결제 정보 관리</li>
+                    <li><strong>연체 수수료 자동 계산</strong> — Cron 기반 매일 실행, 공휴일 체크, 연체 수수료 계산 및 한도 차감</li>
+                    <li><strong>결제 예정일 알림 자동화</strong> — Cron 기반 결제일 3일 전·당일 이메일·SMS 자동 발송, 연체 알림</li>
+                    <li><strong>다채널 알림 통합</strong> — Django Signals 기반 자동 발송, Mailgun·CoolSMS·NCP SENS·Firebase 연동</li>
+                    <li><strong>결제 한도 실시간 관리</strong> — 주문·환불·연체 시 한도 증감, 총 한도·후불 한도 분리 관리</li>
+                    <li><strong>환불 처리 자동화</strong> — Django Admin 환불 인터페이스, SettleBank 환불 API 연동, 수수료 차감</li>
+                    <li><strong>Django Admin 커스터마이징</strong> — 계층 구조 관리, 자동완성 검색, 반려사유 관리</li>
+                    <li><strong>Celery + Redis 비동기 처리</strong> — 백그라운드 작업, Redis Broker 연동</li>
+                    <li><strong>AWS 인프라 구축</strong> — Elastic Beanstalk 배포, RDS PostgreSQL, S3, GitHub Actions CI/CD</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>복잡한 연체 로직</strong> — 공휴일·주말 제외 연체 카운트, 연체 수수료 자동 계산, 한도 차감 및 상태 자동 전환, 공휴일 API 연동</li>
+                    <li><strong>SettleBank API 암호화</strong> — AES-256 암호화 및 Signature 생성, 결제·취소·환불 API 연동, 에러 핸들링</li>
+                    <li><strong>결제 한도 정합성 보장</strong> — 주문·환불·연체 시 한도 증감 트랜잭션 처리, 총 한도·후불 한도 분리, 실시간 업데이트</li>
+                    <li><strong>다채널 알림 통합</strong> — 4개 API 통합, Django Signals 자동 발송, 실패 로그 추적</li>
+                    <li><strong>학생 인증 워크플로</strong> — 본인인증·이메일 인증·서류 검증 종합, 신용 평가, 승인·반려·재심사 상태 관리</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

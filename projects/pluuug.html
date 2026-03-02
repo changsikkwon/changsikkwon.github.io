@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pluuug - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2023.08 ~ 2025.12</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">pluuug</h1>
+            <p class="detail-subtitle">영업·계약·정산·세금계산서 자동화 SaaS 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django</span>
+                <span class="detail-tag">DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL (Aurora)</span>
+                <span class="detail-tag">AWS ECS</span>
+                <span class="detail-tag">Celery</span>
+                <span class="detail-tag">Toss Payments Billing</span>
+                <span class="detail-tag">Popbill</span>
+                <span class="detail-tag">Codef</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">OAuth2</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>의뢰·견적·계약·정산·세금계산서·프로젝트 관리까지 B2B 비즈니스 운영 전 과정을 통합 관리하는 All-in-One SaaS 플랫폼입니다. Toss Payments 정기 결제, Popbill 세금계산서 자동 발행, Codef 금융 데이터 실시간 동기화, Gmail·Outlook 이메일 통합, Google Calendar 동기화를 단일 플랫폼에서 제공합니다. Django 멀티 테넌시 아키텍처로 비즈니스 단위 완전 분리를 구현하고, AWS ECS Fargate 환경에서 안정적으로 운영됩니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>의뢰·고객 관리</strong> — 의뢰 접수·상태 관리·전환율 추적, CRM 고객 정보·상태 워크플로·파일 관리</li>
+                    <li><strong>견적 시스템</strong> — 견적서 생성·카테고리·항목·수식 계산·다국어·다통화 지원·PDF 출력</li>
+                    <li><strong>계약 관리</strong> — 회차·정기·단건 계약 타입, 계약서 생성·상태 워크플로·히스토리·파일·링크 관리</li>
+                    <li><strong>정산 시스템</strong> — 착수금·중도금·잔금·정기 결제 자동 스케줄, D-Day 알림, 세금계산서 연동, Transaction 매칭</li>
+                    <li><strong>Popbill 세금계산서</strong> — 세금계산서 자동 발행, 국세청 실시간 전송, 발행 이력·거래처 관리, Codef 연동 불러오기</li>
+                    <li><strong>Toss Payments Billing</strong> — 빌링키 발급, 정기 결제 자동 청구, 결제 이력·취소·환불 관리, Webhook 처리</li>
+                    <li><strong>Codef 금융 연동</strong> — 실시간 계좌 조회, 거래 내역 동기화, 정산 Transaction 자동 매칭</li>
+                    <li><strong>이메일 통합</strong> — Gmail·Outlook·Mailgun 통합, 발송·수신·쓰레드 관리, 열람 추적, 파일 첨부, 예약 발송</li>
+                    <li><strong>프로젝트 관리</strong> — 프로젝트 상태 관리, 마일스톤, 리소스 배정, Man-Month 계산, 수익률 분석</li>
+                    <li><strong>지출 관리</strong> — 계정과목별 지출 관리, 예산 대비 지출 추적, 프로젝트 원가 계산</li>
+                    <li><strong>Google Calendar 연동</strong> — 계약 일정·정산 예정일·Todo 자동 동기화, 양방향 연동</li>
+                    <li><strong>Web Form Builder</strong> — 커스텀 웹폼 생성, 의뢰 자동 생성, 약관 동의 관리, UTM 추적</li>
+                    <li><strong>Webhook 시스템</strong> — 의뢰·견적·계약 변경 이벤트 Webhook, 외부 시스템 연동</li>
+                    <li><strong>Dashboard & KPI</strong> — 전환율·지연율·매출·수익률 대시보드, 실시간 KPI 추적</li>
+                    <li><strong>멤버 권한 관리</strong> — 멤버별 역할·권한 관리, 엔티티별 편집 제한, 담당자 배정</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>Django 멀티 테넌시 아키텍처</strong> — 비즈니스 단위 완전 분리, 40+ Django 앱 설계, 앱 간 의존성 최소화</li>
+                    <li><strong>계약·정산 자동화 엔진</strong> — 회차·정기·단건 정산 타입별 자동 스케줄링, 알림 시스템, 상태 관리</li>
+                    <li><strong>견적 계산 엔진</strong> — 카테고리·항목·수식(사칙연산·함수) 기반 동적 계산, 다통화·부가세 타입 지원</li>
+                    <li><strong>Toss Payments Billing API</strong> — 빌링키 발급·저장, 자동 청구 스케줄, Webhook 검증·처리, 결제 이력 관리</li>
+                    <li><strong>Popbill API 통합</strong> — 세금계산서 발행·수정·국세청 전송, 발행 이력 동기화, 거래처 관리</li>
+                    <li><strong>Codef API 통합</strong> — 금융 데이터 조회 API, 계좌·거래내역 동기화, 인증서 관리, Transaction 자동 매칭</li>
+                    <li><strong>이메일 멀티 채널 통합</strong> — Gmail API·Outlook API·Mailgun API 통합, 쓰레드 관리, 열람 추적 픽셀</li>
+                    <li><strong>Google Calendar API</strong> — OAuth2 인증, 일정 CRUD, 양방향 동기화, 변경 감지</li>
+                    <li><strong>Transaction 매칭 시스템</strong> — Codef 거래내역과 정산 자동 매칭, 입출금 검증</li>
+                    <li><strong>프로젝트 원가 계산</strong> — Man-Month 자동 계산, 리소스 배정률·일정 기반 집계, 수익률 분석</li>
+                    <li><strong>Webhook 시스템</strong> — 엔티티 변경 감지, 변경 필드 추적, 외부 시스템 Webhook 전송</li>
+                    <li><strong>AWS ECS Fargate</strong> — 컨테이너 기반 배포, Application Load Balancer, Auto Scaling</li>
+                    <li><strong>Celery + SQS</strong> — 비동기 작업 큐(이메일·결제·세금계산서·금융 동기화), 스케줄 자동화</li>
+                    <li><strong>PostgreSQL Aurora Master-Slave</strong> — Read Replica 읽기 분산, Connection Routing</li>
+                    <li><strong>S3 Presigned URL</strong> — 파일 업로드·다운로드 직접 S3 연동, 보안 강화</li>
+                    <li><strong>OpenAPI 문서화</strong> — drf-spectacular 기반 OpenAPI 3.0 스키마 자동 생성, Swagger UI</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>복잡한 정산 스케줄 자동화</strong> — 회차·정기·단건 정산 타입별 로직 분리, 자동 스케줄 생성·알림·상태 관리 통합</li>
+                    <li><strong>멀티 채널 이메일 통합</strong> — Gmail·Outlook·Mailgun 3개 채널 통합, 쓰레드 관리·열람 추적·예약 발송 통일</li>
+                    <li><strong>Transaction 자동 매칭</strong> — Codef 거래내역과 정산 금액·일자 기반 자동 매칭, 중복 방지·검증 로직</li>
+                    <li><strong>Master-Slave Read 성능 개선</strong> — Read Replica 분산으로 약 30% 성능 향상, Connection Routing 최적화</li>
+                    <li><strong>외부 API 통합 및 Callback 처리</strong> — Toss Payments·Popbill·Codef 3개 외부 API Webhook·Callback 검증·처리</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

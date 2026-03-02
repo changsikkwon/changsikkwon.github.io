@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salady - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2021.04 ~ 2022.09</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">Salady</h1>
+            <p class="detail-subtitle">프랜차이즈 B2B 공급망 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django · DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">openpyxl</span>
+                <span class="detail-tag">Cron</span>
+                <span class="detail-tag">AWS (EB · RDS · S3 · ALB)</span>
+                <span class="detail-tag">GitHub Actions</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>샐러드 프랜차이즈 가맹점주를 위한 B2B 발주·정산 관리 플랫폼입니다. 가맹점이 상품을 발주하고, 주문·반품을 관리하며, 월별/분기별 거래명세서와 매출을 자동 생성·조회할 수 있는 전사 운영 시스템입니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>상품 카탈로그</strong> — 카테고리·공급사별 상품 관리, 옵션 시스템, 주문 마감 시간, 묶음배송 여부, 연휴 주문 마감 문구</li>
+                    <li><strong>발주 시스템</strong> — 장바구니, 주문, 주문 상품별 상태 관리 (취소/완료/접수완료/반품요청/반품승인/반품거절)</li>
+                    <li><strong>거래명세서</strong> — 월별/분기별 거래명세서 자동 생성, 업체별 금액·세액·합계, Excel 다운로드 (openpyxl)</li>
+                    <li><strong>매출 관리</strong> — 월별 매출 집계, 배달 플랫폼별 매출 (배민·요기요·쿠팡이츠 등), 로열티 계산</li>
+                    <li><strong>공지사항 & 건의사항</strong> — 게시판 시스템</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>Excel 발주서 자동 생성</strong> — 거래명세서 Excel 파일 생성, 업체별·상품별 집계 데이터 포맷팅</li>
+                    <li><strong>Cron 기반 정산 자동화</strong> — 매월 1일/16일 거래명세서 자동 생성, 1차/2차 분기 자동 구분</li>
+                    <li><strong>복잡한 정산 로직</strong> — 매출·로열티·배달 플랫폼별 수수료 계산, 거래명세서-매출 연동, 완료 여부 관리</li>
+                    <li><strong>주문 상태 워크플로</strong> — 주문 → 접수 → 반품요청 → 반품승인/거절 상태 전환, 필터링 및 관리</li>
+                    <li><strong>묶음배송 로직</strong> — 묶음배송 가능 상품 묶음 시 배송비 1회만 부과, 개별 배송비 계산</li>
+                    <li><strong>Django Admin 커스터마이징</strong> — 계층 구조 관리, 거래명세서 Excel 다운로드</li>
+                    <li><strong>AWS 인프라 구축</strong> — Elastic Beanstalk 배포, RDS PostgreSQL, S3, ALB, GitHub Actions CI/CD</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>정산 자동화</strong> — Cron으로 매월 1일/16일 자동 실행, 전체 가맹점의 주문 데이터를 집계하여 거래명세서 자동 생성, 수동 작업 대폭 감소</li>
+                    <li><strong>Excel 대용량 데이터 처리</strong> — openpyxl로 수백~수천 건의 주문 데이터를 업체별·상품별로 집계하여 Excel 파일 생성, 메모리 최적화</li>
+                    <li><strong>복잡한 매출 계산</strong> — 배달 플랫폼별 매출, 로열티, 세액 자동 계산, 정합성 검증 로직 구현</li>
+                    <li><strong>주문 상태 정합성</strong> — 주문 → 접수 → 반품의 상태 전환 검증, 잘못된 상태 변경 방지</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

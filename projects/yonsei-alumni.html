@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연세대학교 동창회 - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2021.11 ~ 2022.03</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">연세대학교 상경·경영대학 동창회</h1>
+            <p class="detail-subtitle">커뮤니티·모임·결제·실시간 채팅 통합 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django · DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">Django Channels · WebSocket</span>
+                <span class="detail-tag">Celery · Redis</span>
+                <span class="detail-tag">OAuth2 · JWT</span>
+                <span class="detail-tag">이니시스 (PG)</span>
+                <span class="detail-tag">Mailgun · CoolSMS · Expo</span>
+                <span class="detail-tag">AWS ECS Fargate · CloudFormation</span>
+                <span class="detail-tag">GitHub Actions</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>연세대학교 상경·경영대학 동문을 위한 커뮤니티 플랫폼(yonsang.net)입니다. 커뮤니티 게시판, 동문 모임 개설·참가비 결제, 실시간 채팅, 다채널 알림을 통합한 전사 운영 시스템입니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>커뮤니티 게시판</strong> — 공지·일반 게시글, 대댓글 시스템, 좋아요, 파일·이미지 첨부, 상단 고정, 관심사별 카테고리</li>
+                    <li><strong>동문 모임 시스템</strong> — 모임 개설·참가 신청, 결제 마감일 관리, 이니시스(Inicis) PG 참가비 결제 (Web·Mobile)</li>
+                    <li><strong>실시간 채팅</strong> — Django Channels + Redis WebSocket 기반 실시간 메시징, 접속 상태 관리, 읽음 여부 추적</li>
+                    <li><strong>다채널 알림</strong> — Expo 모바일 푸시, Mailgun 이메일, CoolSMS SMS, NCP 카카오 알림톡, Django Signals 자동 발송</li>
+                    <li><strong>OAuth2 소셜 로그인</strong> — Kakao·Apple 소셜 로그인, JWT 인증</li>
+                    <li><strong>이메일·휴대폰 인증</strong> — 인증 코드 발송 및 토큰 검증</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>Django Channels WebSocket</strong> — 실시간 채팅, 그룹 메시징, 접속/퇴장 상태 실시간 업데이트</li>
+                    <li><strong>이니시스(Inicis) PG 결제 연동</strong> — Web·Mobile 결제 승인, Signature 검증, 결제 상태 관리</li>
+                    <li><strong>다채널 알림 통합</strong> — Django Signals 기반 자동 발송, Mailgun·CoolSMS·NCP SENS·Expo 연동</li>
+                    <li><strong>OAuth2 소셜 로그인 통합</strong> — Kakao·Apple OAuth2, 소셜 계정 관리, JWT 토큰 발급</li>
+                    <li><strong>대댓글 시스템</strong> — 계층 구조 구현, 재귀 쿼리</li>
+                    <li><strong>Celery + Redis 비동기 처리</strong> — 백그라운드 작업, 스케줄링</li>
+                    <li><strong>AWS ECS Fargate 멀티 서비스</strong> — web/websocket/celery/celerybeat 4개 서비스 분리 배포</li>
+                    <li><strong>CloudFormation IaC</strong> — VPC·ECS·RDS·S3 전체 인프라 코드화, 조건부 리소스 생성</li>
+                    <li><strong>GitHub Actions CI/CD</strong> — ECR 이미지 빌드·푸시, ECS 배포 자동화</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>WebSocket 실시간 통신</strong> — Django Channels + Redis로 WebSocket 서버 구축, 그룹 메시징, 접속 상태 실시간 동기화</li>
+                    <li><strong>멀티 서비스 ECS 아키텍처</strong> — 4개 서비스 분리 배포, Auto Scaling 및 Load Balancing 구성</li>
+                    <li><strong>CloudFormation 조건부 배포</strong> — WebSocket/Celery/Redis 선택적 배포, 인프라 유연성 확보</li>
+                    <li><strong>다채널 알림 통합</strong> — 4개 API 통합, Django Signals 자동 발송, 실패 로그 추적</li>
+                    <li><strong>OAuth2 멀티 Provider 통합</strong> — Kakao·Apple OAuth2 플로우 통합, 통합 계정 관리</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

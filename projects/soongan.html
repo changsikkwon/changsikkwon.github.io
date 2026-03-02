@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soongan - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2022.04 ~ 2023.07</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">Soongan (순간)</h1>
+            <p class="detail-subtitle">기념일 소셜 커뮤니티 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django</span>
+                <span class="detail-tag">DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL (Master-Slave)</span>
+                <span class="detail-tag">AWS S3</span>
+                <span class="detail-tag">OAuth2</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">Firebase Push</span>
+                <span class="detail-tag">Cron</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>기념일을 중심으로 사람들이 모이고 소통하는 소셜 커뮤니티 플랫폼입니다. 커플·가족 기념일 관리, 커뮤니티 게시판, 이벤트 참여, 포인트 적립·교환 등을 제공하며, 15개월간 단독으로 전체 백엔드 아키텍처를 설계·구축했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>인증 및 사용자</strong> — OAuth2 소셜 로그인(Kakao·Naver·Apple), 본인인증(아임포트·토스), 프로필·친구·차단 관리</li>
+                    <li><strong>기념일</strong> — 개인·공유 기념일 등록, 디데이 알림, 기념일 템플릿</li>
+                    <li><strong>커뮤니티</strong> — 게시글·댓글·좋아요, 이미지·영상 첨부, 해시태그, 신고·검수 시스템</li>
+                    <li><strong>이벤트</strong> — 출석체크·미션·퀴즈·응모 이벤트, 당첨자 추첨 자동화</li>
+                    <li><strong>포인트</strong> — 적립·사용·교환·소멸 정책, 히스토리 추적, CronJob 기반 자동 소멸</li>
+                    <li><strong>알림</strong> — Firebase Push, 카테고리별 알림 설정(좋아요·댓글·이벤트 등)</li>
+                    <li><strong>관리자</strong> — Django Admin 커스터마이징, 게시물 검수, 이벤트·포인트 관리, 행동 로그</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>PostgreSQL Master-Slave 구조</strong> — 읽기/쓰기 분리로 조회 성능 향상 및 DB 부하 분산</li>
+                    <li><strong>다중 인증 시스템 통합</strong> — Kakao·Naver·Apple OAuth2 소셜 로그인, 아임포트·토스 본인인증 연동, JWT 토큰 관리</li>
+                    <li><strong>포인트 자동화 시스템</strong> — 적립·교환·소멸 정책, Cron 기반 스케줄링, 히스토리 추적</li>
+                    <li><strong>이벤트 엔진</strong> — 출석체크·미션·퀴즈·응모 타입별 로직, 중복 참여 방지, 당첨자 추첨 자동화</li>
+                    <li><strong>Firebase Push 알림</strong> — 카테고리별 알림 세분화, 사용자 설정 기반 필터링, 대량 발송</li>
+                    <li><strong>커뮤니티 검수 시스템</strong> — 신고 누적 시 자동 블라인드, 검수 인터페이스, 히스토리 추적</li>
+                    <li><strong>S3 미디어 처리</strong> — Presigned URL 기반 직접 업로드</li>
+                    <li><strong>개인정보 보호</strong> — 민감 정보 마스킹, 관리자 행동 로그, 탈퇴 시 데이터 익명화</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>Master-Slave DB 성능 최적화</strong> — 읽기/쓰기 트랜잭션 자동 분리, Slave 장애 시 Master Failover 처리로 가용성 확보</li>
+                    <li><strong>포인트 정합성 보장</strong> — 동시 요청 시 중복 차감 방지, 데이터베이스 트랜잭션 및 락 활용, 금융 데이터 정확성 보장</li>
+                    <li><strong>이벤트 중복 참여 방지</strong> — 동시 요청 시에도 1회만 참여 보장, 유니크 제약 조건 및 트랜잭션 활용</li>
+                    <li><strong>대량 푸시 알림 처리</strong> — Firebase FCM 배치 전송, Celery 비동기 처리로 수천 건 발송</li>
+                    <li><strong>다중 인증 시스템 통합</strong> — Kakao·Naver·Apple OAuth2 플로우 차이 처리, 본인인증 연동, 통합 계정 관리</li>
+                    <li><strong>15개월 단독 개발</strong> — 요구사항 분석부터 설계, 개발, 배포, 운영까지 전 과정 단독 수행</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

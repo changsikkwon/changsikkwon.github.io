@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postoo - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2022.11 ~ 2023.03</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">Postoo</h1>
+            <p class="detail-subtitle">IT 프로젝트 자동 견적 산출 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django</span>
+                <span class="detail-tag">DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">MPTT</span>
+                <span class="detail-tag">AWS ECS</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">REST API</span>
+                <span class="detail-tag">OpenAPI</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>IT 프로젝트 견적을 자동 산출하는 플랫폼입니다. 서비스 유형과 필요 기능을 선택하면 직군별 공수·복잡도·솔루션을 종합하여 실시간 견적을 계산합니다. MPTT 기반 계층형 기능 트리로 수백 개의 기능을 체계적으로 관리하며, 기존 1~2일 걸리던 견적 산출 과정을 수 분으로 단축했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>MPTT 기능 트리</strong> — 4단계 계층형 기능 트리, 직군별 공수 관리, 필수/선택/자동 선택 옵션</li>
+                    <li><strong>견적 계산 엔진</strong> — 직군별 연봉·공수·투입 인력·복잡도·솔루션 종합 계산</li>
+                    <li><strong>다단계 견적 프로세스</strong> — 서비스→기능→인력→솔루션 4단계 워크플로</li>
+                    <li><strong>솔루션 최적화</strong> — Commerce/CMS/NoCode/Self-Development 타입별 견적 최적화</li>
+                    <li><strong>의뢰/컨설팅 신청</strong> — 견적 완료 후 의뢰·컨설팅 신청, 상태 관리</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>MPTT 계층형 기능 트리</strong> — 4단계 트리 구조, 순서 관리</li>
+                    <li><strong>견적 계산 엔진</strong> — 직군별 연봉 기반 표준 단가 산출, 투입 인력 효율성 반영, 복잡도 가중치 적용</li>
+                    <li><strong>다단계 견적 프로세스</strong> — 진행 단계 관리, 완료 여부 추적</li>
+                    <li><strong>솔루션 최적화 로직</strong> — 타입별 최적화, 추가 비용 반영</li>
+                    <li><strong>Social OAuth2 인증</strong> — Kakao·Naver·Google 소셜 로그인, JWT 토큰 인증</li>
+                    <li><strong>OpenAPI 문서화</strong> — OpenAPI 3.0 스키마 자동 생성, Swagger UI</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>복합 견적 계산</strong> — 직군별 연봉·공수·투입 인력·복잡도·솔루션 변수 종합, 투입 인력 증가 시 효율성 감소 반영</li>
+                    <li><strong>계층형 기능 트리 관리</strong> — 4단계 기능 트리 효율적 조회, 순서 관리</li>
+                    <li><strong>다단계 프로세스 설계</strong> — 4단계 워크플로 구현, 뒤로가기 시 이전 데이터 유지</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

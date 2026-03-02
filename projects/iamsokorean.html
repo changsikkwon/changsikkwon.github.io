@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iamsokorean - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2021.04 ~ 2021.07</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">Iamsokorean</h1>
+            <p class="detail-subtitle">한국 문화 소통 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django · DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">OAuth 2.0</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">AWS (EB · RDS · S3)</span>
+                <span class="detail-tag">GitHub Actions</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>한국 문화에 관심 있는 외국인을 위한 종합 콘텐츠 플랫폼입니다. 한국어 학습 사전(Kictionary), K-pop 아티스트 프로필, 한국 문화 영상 콘텐츠(Play K), 커뮤니티 게시판을 통해 한류 팬들이 한국 문화를 배우고 소통할 수 있는 공간을 제공했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>Kictionary (한국어 사전)</strong> — 한국어 단어·표현 사전, 사용자 Q&A, 예문 등록, 관리자 승인 워크플로</li>
+                    <li><strong>아티스트 프로필</strong> — K-pop 그룹·멤버 정보, 대표곡, 관리자 검수</li>
+                    <li><strong>Play K (영상 콘텐츠)</strong> — 한국 문화 영상, 카테고리별 분류, 조회수 집계, 메인 노출 관리</li>
+                    <li><strong>커뮤니티</strong> — 게시글·댓글, 구독자 알림, 메인 피드</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>한국어 초성 검색</strong> — 한글 음소 분리로 초성 검색 구현 (예: "ㄱㄴㅅ" → "강남스타일"), 외국인 검색 편의성 향상</li>
+                    <li><strong>콘텐츠 승인 워크플로</strong> — 사용자 제출 → 관리자 검수 → 승인/반려 프로세스, Django Admin 검수 인터페이스</li>
+                    <li><strong>쿠키 기반 조회수 관리</strong> — 일별 쿠키로 중복 조회 방지, 정확한 조회수 집계</li>
+                    <li><strong>다중 OAuth2 통합</strong> — Kakao·Naver·Google 소셜 로그인, JWT 인증 및 통합 계정 관리</li>
+                    <li><strong>Django Admin 커스터마이징</strong> — 콘텐츠 승인, 메인 노출 관리, 구독자 알림</li>
+                    <li><strong>AWS 인프라 구축</strong> — Elastic Beanstalk 배포, RDS PostgreSQL, S3, GitHub Actions CI/CD</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>한국어 초성 검색</strong> — 한글 음소 분리(초성·중성·종성), 초성 매칭 알고리즘 구현으로 외국인 검색 편의성 향상</li>
+                    <li><strong>조회수 중복 방지</strong> — 쿠키 기반 일별 중복 체크, 익명/로그인 사용자 모두 지원, 정확한 통계 확보</li>
+                    <li><strong>콘텐츠 승인 프로세스</strong> — 품질 관리를 위한 승인 워크플로, Django Admin 일괄 승인/반려 기능</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

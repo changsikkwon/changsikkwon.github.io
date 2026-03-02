@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snappay - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2024.03</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">Snappay</h1>
+            <p class="detail-subtitle">서버리스 결제 온보딩/상점 관리 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">FastAPI</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">DynamoDB</span>
+                <span class="detail-tag">AWS Lambda</span>
+                <span class="detail-tag">API Gateway</span>
+                <span class="detail-tag">SAM</span>
+                <span class="detail-tag">SSM</span>
+                <span class="detail-tag">Toss Payments API</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">OAuth2</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>Toss Payments 인스턴트 온보딩 API를 연동하여 상점 생성 및 가입 신청을 처리하고 Callback을 검증하는 서버리스 기반 상점 관리 플랫폼입니다. AWS Lambda + API Gateway 서버리스 아키텍처로 구축하여 인프라 관리 비용을 최소화하고, FastAPI 비동기 처리와 DynamoDB NoSQL로 빠른 응답 성능을 구현했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>Toss Payments 온보딩</strong> — 상점 생성, 가입 신청, Callback 처리</li>
+                    <li><strong>상점 관리</strong> — 상점 생성·조회·수정·삭제, 상태 관리</li>
+                    <li><strong>Callback 검증</strong> — SHA-256 해시 기반 시그니처 검증, 온보딩 정보 무결성 보장</li>
+                    <li><strong>JWT 인증</strong> — OAuth2 Password Flow 기반 토큰 인증</li>
+                    <li><strong>민감정보 관리</strong> — AWS SSM Parameter Store로 API 키 및 시크릿 관리</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>FastAPI 비동기 REST API</strong> — async/await 기반 비동기 처리, Pydantic 데이터 검증</li>
+                    <li><strong>AWS Lambda 서버리스 아키텍처</strong> — Lambda + API Gateway 구성, Mangum ASGI 어댑터</li>
+                    <li><strong>Toss Payments API 연동</strong> — 인스턴트 온보딩 API 완전 연동, Callback 시그니처 검증</li>
+                    <li><strong>DynamoDB NoSQL 설계</strong> — 테이블 설계, CRUD 추상화 레이어, boto3 연동</li>
+                    <li><strong>JWT 인증 시스템</strong> — OAuth2 Password Flow, python-jose JWT 생성 및 검증</li>
+                    <li><strong>AWS SAM IaC</strong> — template.yaml로 Lambda·API Gateway·DynamoDB 정의, 배포 자동화</li>
+                    <li><strong>GitHub Actions CI/CD</strong> — 코드 푸시 시 자동 테스트 및 SAM 배포</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>서버리스 아키텍처 구축</strong> — Lambda Cold Start 최소화, Mangum으로 FastAPI ASGI 어댑터 구현</li>
+                    <li><strong>Toss Payments Callback 검증</strong> — SHA-256 해시 시그니처 검증으로 위변조 방지</li>
+                    <li><strong>DynamoDB 데이터 모델링</strong> — NoSQL 특성 활용한 유연한 스키마 설계, 빠른 조회 성능</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

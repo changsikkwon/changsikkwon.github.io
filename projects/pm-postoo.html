@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Postoo - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2023.04 ~ 2023.08</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer (단독 개발)</span>
+            </div>
+
+            <h1 class="detail-title">PM Postoo</h1>
+            <p class="detail-subtitle">프로젝트 관리 협업 SaaS</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">Django</span>
+                <span class="detail-tag">DRF</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">PostgreSQL</span>
+                <span class="detail-tag">Django Channels</span>
+                <span class="detail-tag">Redis</span>
+                <span class="detail-tag">MPTT</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">WebSocket</span>
+                <span class="detail-tag">AWS ECS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>IT 프로젝트 전 과정을 협업·관리할 수 있는 B2B SaaS 플랫폼입니다. WBS, 요구사항 정의서, 산출물, 일정, 백로그, 실시간 채팅 기능을 제공하며, 프로젝트 일정·산출물·작업 상태를 종합하여 진행률을 자동 계산합니다. MPTT 기반 계층형 Task 관리와 Django Channels WebSocket 실시간 채팅을 구현했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>주요 기능</h3>
+                <ul>
+                    <li><strong>MPTT 계층형 WBS</strong> — Task 트리 구조, 공수 재귀 집계, 상태 관리</li>
+                    <li><strong>요구사항 정의서 버전 관리</strong> — 4단계 계층 구조, 버전별 확정 여부 추적</li>
+                    <li><strong>진행률 자동 계산</strong> — D-Day·산출물·작업 진행률, 직군별 세분화</li>
+                    <li><strong>Django Channels 실시간 채팅</strong> — WebSocket 채팅, 읽음 여부 추적, 백로그 연동</li>
+                    <li><strong>산출물 관리</strong> — 직군별 분류, 파일 업로드, 확정 여부 관리</li>
+                    <li><strong>멤버 권한 시스템</strong> — 프로젝트 리드/클라이언트/실무자 구분, 권한별 접근 제어</li>
+                    <li><strong>백로그 워크플로</strong> — 추가 요구사항 관리, 상태별 처리</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>MPTT 계층형 WBS</strong> — Task 트리 구조, 하위 작업 공수 재귀 집계</li>
+                    <li><strong>요구사항 정의서 버전 시스템</strong> — 4단계 계층 구조, 버전별 확정 여부 관리</li>
+                    <li><strong>진행률 자동 계산</strong> — D-Day·산출물·작업 3가지 진행률 계산 엔진</li>
+                    <li><strong>Django Channels WebSocket</strong> — Redis 기반 실시간 채팅, 읽음 여부 추적</li>
+                    <li><strong>멤버 권한 시스템</strong> — 역할별 접근 제어, 담당자 배정</li>
+                    <li><strong>REST API + WebSocket 하이브리드</strong> — DRF API + WebSocket 실시간 협업</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>복합 진행률 계산</strong> — 일정·산출물·작업 3가지 진행률 독립 계산, 직군별 세분화</li>
+                    <li><strong>계층형 공수 집계</strong> — 트리 구조 하위 작업 공수 재귀 집계, 실시간 업데이트</li>
+                    <li><strong>WebSocket 실시간 채팅</strong> — Redis 메시지 브로커, 연결 상태 및 읽음 여부 관리</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

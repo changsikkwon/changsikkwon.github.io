@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIECE - 권창식</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">권창식</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="detail-hero-container">
+            <a href="../index.html#projects" class="back-link">← 프로젝트 목록으로</a>
+
+            <div class="detail-meta">
+                <span class="detail-meta-item"><strong>기간</strong> 2021.12 ~ 2022.03</span>
+                <span class="detail-meta-item"><strong>역할</strong> Backend Engineer</span>
+            </div>
+
+            <h1 class="detail-title">PIECE</h1>
+            <p class="detail-subtitle">미술품 조각 투자 플랫폼</p>
+
+            <div class="detail-tags">
+                <span class="detail-tag">FastAPI</span>
+                <span class="detail-tag">Python</span>
+                <span class="detail-tag">SQLAlchemy</span>
+                <span class="detail-tag">MySQL</span>
+                <span class="detail-tag">RabbitMQ</span>
+                <span class="detail-tag">WebSocket</span>
+                <span class="detail-tag">JWT</span>
+                <span class="detail-tag">Pydantic</span>
+                <span class="detail-tag">ASGI (Gunicorn/Uvicorn)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="detail-content-container">
+            <div class="detail-section">
+                <h3>서비스 소개</h3>
+                <p>고가의 미술품을 조각 단위로 나누어 소액으로 투자하고 포트폴리오를 관리하는 핀테크 투자 플랫폼입니다. FastAPI 기반 마이크로서비스 아키텍처를 설계·구축하여 금융 거래의 안정성과 확장성을 확보했습니다.</p>
+            </div>
+
+            <div class="detail-section">
+                <h3>마이크로서비스 아키텍처</h3>
+                <p>도메인별로 독립적인 8개의 서비스로 분리하여 결합도를 최소화하고, 각 서비스의 독립적인 배포와 확장을 가능하게 했습니다:</p>
+                <ul>
+                    <li><strong>사용자/인증 서비스</strong> — JWT 기반 회원가입·로그인·토큰 재발급, 프로필 관리, 북마크, PIN 설정</li>
+                    <li><strong>상품 서비스</strong> — 미술품 정보·조각 단위·가격 관리</li>
+                    <li><strong>구매 서비스</strong> — RabbitMQ 기반 비동기 구매 요청 처리</li>
+                    <li><strong>입금 서비스</strong> — 결제 처리 및 잔액 관리</li>
+                    <li><strong>포트폴리오 서비스</strong> — 보유 자산·수익률 계산 및 조회</li>
+                    <li><strong>게시판 서비스</strong> — 커뮤니티 게시글·댓글 관리</li>
+                    <li><strong>알림 서비스</strong> — 푸시 알림 발송 관리</li>
+                    <li><strong>WebSocket 서비스</strong> — 실시간 양방향 통신, 구매·포트폴리오 상태 실시간 업데이트</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>핵심 개발 내용</h3>
+                <ul>
+                    <li><strong>비동기 구매 처리 파이프라인</strong> — RabbitMQ 메시지 큐를 활용한 구매 요청 비동기 처리, 동시 구매 시 재고 관리 및 Race Condition 방지</li>
+                    <li><strong>실시간 알림 시스템</strong> — WebSocket 기반 양방향 통신으로 구매 상태·입금 확인 등 실시간 업데이트 제공</li>
+                    <li><strong>SQLAlchemy ORM 모델링</strong> — 사용자·상품·구매·포트폴리오 간 관계 설계, N+1 쿼리 최적화 및 인덱싱</li>
+                    <li><strong>JWT 인증 및 권한 관리</strong> — Access/Refresh Token 기반 안전한 인증, 사용자 등급별 API 접근 제어</li>
+                    <li><strong>Pydantic 데이터 검증</strong> — Request/Response 스키마 정의, 타입 힌팅 및 자동 문서화</li>
+                    <li><strong>ASGI 프로덕션 배포</strong> — Gunicorn 프로세스 관리 + Uvicorn 워커로 고성능 비동기 처리 환경 구축</li>
+                    <li><strong>API 문서 자동화</strong> — FastAPI의 OpenAPI(Swagger) 자동 생성으로 프론트엔드 협업 효율화</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>기술적 도전과 해결</h3>
+                <ul>
+                    <li><strong>동시 구매 처리</strong> — 여러 사용자가 동시에 같은 조각을 구매할 때 재고 초과 방지를 위해 RabbitMQ의 메시지 큐를 활용하여 순차 처리 보장</li>
+                    <li><strong>서비스 간 데이터 일관성</strong> — 분산 트랜잭션 대신 이벤트 기반 아키텍처로 최종 일관성(Eventual Consistency) 구현</li>
+                    <li><strong>WebSocket 연결 관리</strong> — 사용자별 WebSocket 세션 관리 및 재연결 처리, 메모리 누수 방지</li>
+                    <li><strong>금융 데이터 정합성</strong> — 포트폴리오 계산 로직의 정확성 보장, 소수점 처리 및 Decimal 타입 사용</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
