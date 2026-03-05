@@ -13,6 +13,7 @@
             <a href="#" class="nav-logo">권창식</a>
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
             </ul>
@@ -35,7 +36,7 @@
         <div class="content-container">
             <h2 class="section-heading">About</h2>
             <div class="about-content">
-                <p>모든 사람의 일상에 자연스럽게 녹아든 서비스를 개발하고 싶습니다.</p>
+                <p>4년 8개월간 백엔드 개발자로 일하며 11개 프로젝트를 단독 개발했습니다. 결제·정산·세무 도메인에서 실전 경험을 쌓았고, 2년 이상 무중단 운영 중인 B2B SaaS를 구축했습니다.</p>
                 <p>새로운 기술을 빠르게 학습하고 적용하는 것을 좋아하지만, 유행보다는 실용성을 우선합니다. 적절한 기술 선택이 과도한 엔지니어링보다 중요하다고 믿습니다.</p>
                 <p>"왜?"를 자주 묻고, 근본 원리를 이해하려 노력합니다. 혼자서도 문제를 해결할 수 있지만, 토론하며 더 나은 방향을 찾는 과정을 중요하게 생각합니다.</p>
                 <p>완벽한 설계보다는 빠르게 실행하고 개선하는 방식을 선호하며, 실무에서 바로 적용 가능한 해결책을 만드는 데 집중합니다.</p>
@@ -62,8 +63,46 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="section section-gray">
+        <div class="content-container">
+            <h2 class="section-heading">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <p class="skill-category-items">Django, FastAPI, Python, RESTful API</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Database</h3>
+                    <p class="skill-category-items">PostgreSQL, MySQL, DynamoDB, Redis</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Infrastructure</h3>
+                    <p class="skill-category-items">AWS ECS, Lambda, RDS, S3, Docker</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Payment & Finance</h3>
+                    <p class="skill-category-items">Toss Payments, SettleBank, Popbill, Codef</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Real-time</h3>
+                    <p class="skill-category-items">WebSocket, Channels, RabbitMQ, Firebase</p>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">DevOps</h3>
+                    <p class="skill-category-items">GitHub Actions, CloudFormation, SAM, Sentry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="section section-gray">
+    <section id="experience" class="section">
         <div class="content-container">
             <h2 class="section-heading">Experience</h2>
             <div class="experience-card">
@@ -78,8 +117,9 @@
                     </div>
                 </div>
                 <div class="experience-description">
-                    <p>B2B SaaS, 핀테크, 커뮤니티 플랫폼 중심으로 백엔드 아키텍처 설계, API 개발, 인프라 구축, 운영 자동화까지 폭넓은 영역을 담당해 왔습니다.</p>
-                    <p>결제, 정산, 세무, 금융 연동, 실시간 채팅 등 실서비스 핵심 기능을 다수 구축해 다양한 도메인을 경험했습니다.</p>
+                    <p>11개 프로젝트를 단독으로 개발하며 요구사항 분석부터 설계, 개발, 배포, 운영까지 전 과정을 담당했습니다.</p>
+                    <p>특히 B2B SaaS 플랫폼(pluuug)을 초기 아키텍처 설계부터 프로덕션 런칭, 2년 이상 무중단 운영까지 전체 생명주기를 경험했습니다. Django 멀티 테넌시 아키텍처 설계, 결제·정산·세무 시스템 구축, AWS 인프라 구성 등 비즈니스 핵심 기능을 책임지고 개발했습니다.</p>
+                    <p>B2B SaaS, 핀테크, 커뮤니티 플랫폼 등 다양한 도메인에서 백엔드 아키텍처 설계, API 개발, 인프라 구축, 운영 자동화까지 폭넓은 영역을 경험했습니다.</p>
                 </div>
                 <div class="experience-responsibilities">
                     <h4>주요 역할</h4>
@@ -107,10 +147,9 @@
                 <a href="projects/pluuug.html" class="project-card">
                     <div class="project-meta">
                         <span class="project-period">2023.08 - 2025.12</span>
-                        <span class="project-role">단독 개발</span>
                     </div>
                     <h3 class="project-title">pluuug</h3>
-                    <p class="project-summary">영업·계약·정산 자동화 SaaS</p>
+                    <p class="project-summary">영업·계약·정산 관리 SaaS</p>
                     <div class="project-tags">
                         <span class="tag">Django</span>
                         <span class="tag">PostgreSQL</span>
@@ -123,7 +162,6 @@
                 <a href="projects/snappay.html" class="project-card">
                     <div class="project-meta">
                         <span class="project-period">2024.03</span>
-                        <span class="project-role">단독 개발</span>
                     </div>
                     <h3 class="project-title">Snappay</h3>
                     <p class="project-summary">서버리스 결제 온보딩/상점 관리 플랫폼</p>
@@ -139,7 +177,6 @@
                 <a href="projects/pm-postoo.html" class="project-card">
                     <div class="project-meta">
                         <span class="project-period">2023.04 - 2023.08</span>
-                        <span class="project-role">단독 개발</span>
                     </div>
                     <h3 class="project-title">PM Postoo</h3>
                     <p class="project-summary">프로젝트 관리 협업 SaaS</p>
@@ -151,26 +188,10 @@
                     </div>
                 </a>
 
-                <!-- Project 4: Postoo -->
-                <a href="projects/postoo.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2022.11 - 2023.03</span>
-                        <span class="project-role">단독 개발</span>
-                    </div>
-                    <h3 class="project-title">Postoo</h3>
-                    <p class="project-summary">IT 프로젝트 자동 견적 산출 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">MPTT</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
-                </a>
-
-                <!-- Project 5: Floinsu -->
+                <!-- Project 4: Floinsu -->
                 <a href="projects/floinsu.html" class="project-card">
                     <div class="project-meta">
                         <span class="project-period">2023.03 - 2023.07</span>
-                        <span class="project-role">단독 개발</span>
                     </div>
                     <h3 class="project-title">Floinsu</h3>
                     <p class="project-summary">보험 담보 대출 핀테크 플랫폼</p>
@@ -181,11 +202,25 @@
                     </div>
                 </a>
 
-                <!-- Project 6: Soongan -->
+                <!-- Postoo -->
+                <a href="projects/postoo.html" class="project-card">
+                    <div class="project-meta">
+                        <span class="project-period">2022.11 - 2023.03</span>
+                    </div>
+                    <h3 class="project-title">Postoo</h3>
+                    <p class="project-summary">IT 프로젝트 자동 견적 산출 플랫폼</p>
+                    <div class="project-tags">
+                        <span class="tag">Django</span>
+                        <span class="tag">MPTT</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">AWS ECS</span>
+                    </div>
+                </a>
+
+                <!-- Soongan -->
                 <a href="projects/soongan.html" class="project-card">
                     <div class="project-meta">
                         <span class="project-period">2022.04 - 2023.07</span>
-                        <span class="project-role">단독 개발</span>
                     </div>
                     <h3 class="project-title">Soongan</h3>
                     <p class="project-summary">기념일 소셜 커뮤니티 플랫폼</p>
@@ -196,80 +231,83 @@
                     </div>
                 </a>
 
-                <!-- Project 7: PIECE -->
-                <a href="projects/piece.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2021.12 - 2022.03</span>
-                    </div>
-                    <h3 class="project-title">PIECE</h3>
-                    <p class="project-summary">미술품 조각 투자 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">RabbitMQ</span>
-                        <span class="tag">WebSocket</span>
-                    </div>
-                </a>
+                <!-- More Projects (Hidden by default) -->
+                <div class="hidden-projects">
 
-                <!-- Project 8: Yonsei Alumni -->
-                <a href="projects/yonsei-alumni.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2021.11 - 2022.03</span>
-                        <span class="project-role">단독 개발</span>
-                    </div>
-                    <h3 class="project-title">연세대학교 동창회</h3>
-                    <p class="project-summary">상경·경영대학 동창회 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">Channels</span>
-                        <span class="tag">Inicis</span>
-                    </div>
-                </a>
+                    <!-- PIECE -->
+                    <a href="projects/piece.html" class="project-card">
+                        <div class="project-meta">
+                            <span class="project-period">2021.12 - 2022.03</span>
+                        </div>
+                        <h3 class="project-title">PIECE</h3>
+                        <p class="project-summary">미술품 조각 투자 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">RabbitMQ</span>
+                            <span class="tag">WebSocket</span>
+                        </div>
+                    </a>
 
-                <!-- Project 9: jellydeal -->
-                <a href="projects/jellydeal.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2021.07 - 2021.11</span>
-                        <span class="project-role">단독 개발</span>
-                    </div>
-                    <h3 class="project-title">jellydeal</h3>
-                    <p class="project-summary">대학생 후불결제(BNPL) 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">SettleBank</span>
-                        <span class="tag">Iamport</span>
-                    </div>
-                </a>
+                    <!-- 연세대학교 동창회 -->
+                    <a href="projects/yonsei-alumni.html" class="project-card">
+                        <div class="project-meta">
+                            <span class="project-period">2021.11 - 2022.03</span>
+                        </div>
+                        <h3 class="project-title">연세대학교 동창회</h3>
+                        <p class="project-summary">상경·경영대학 동창회 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Channels</span>
+                            <span class="tag">Inicis</span>
+                        </div>
+                    </a>
 
-                <!-- Project 10: Salady -->
-                <a href="projects/salady.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2021.04 - 2021.09</span>
-                        <span class="project-role">단독 개발</span>
-                    </div>
-                    <h3 class="project-title">Salady</h3>
-                    <p class="project-summary">프랜차이즈 B2B 공급망 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">AWS EB</span>
-                    </div>
-                </a>
+                    <!-- jellydeal -->
+                    <a href="projects/jellydeal.html" class="project-card">
+                        <div class="project-meta">
+                            <span class="project-period">2021.07 - 2021.11</span>
+                        </div>
+                        <h3 class="project-title">jellydeal</h3>
+                        <p class="project-summary">딜 커머스 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">SettleBank</span>
+                            <span class="tag">Iamport</span>
+                        </div>
+                    </a>
 
-                <!-- Project 11: Iamsokorean -->
-                <a href="projects/iamsokorean.html" class="project-card">
-                    <div class="project-meta">
-                        <span class="project-period">2021.04 - 2021.07</span>
-                        <span class="project-role">단독 개발</span>
-                    </div>
-                    <h3 class="project-title">Iamsokorean</h3>
-                    <p class="project-summary">한국 문화 소통 플랫폼</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">OAuth 2.0</span>
-                        <span class="tag">AWS EB</span>
-                    </div>
-                </a>
+                    <!-- Salady -->
+                    <a href="projects/salady.html" class="project-card">
+                        <div class="project-meta">
+                            <span class="project-period">2021.04 - 2021.09</span>
+                        </div>
+                        <h3 class="project-title">Salady</h3>
+                        <p class="project-summary">샐러드 배송 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">AWS EB</span>
+                        </div>
+                    </a>
+
+                    <!-- Iamsokorean -->
+                    <a href="projects/iamsokorean.html" class="project-card">
+                        <div class="project-meta">
+                            <span class="project-period">2021.04 - 2021.07</span>
+                        </div>
+                        <h3 class="project-title">Iamsokorean</h3>
+                        <p class="project-summary">한국 문화 소통 플랫폼</p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">OAuth 2.0</span>
+                            <span class="tag">AWS EB</span>
+                        </div>
+                    </a>
+
+                </div>
             </div>
+
+            <button class="show-more-btn" onclick="toggleProjects()">프로젝트 더보기 (+5개)</button>
         </div>
     </section>
 

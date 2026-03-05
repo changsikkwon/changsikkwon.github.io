@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
+
+    // 프로젝트 펼침 상태 복원
+    const hiddenProjects = document.querySelector('.hidden-projects');
+    const button = document.querySelector('.show-more-btn');
+
+    if (localStorage.getItem('projectsExpanded') === 'true') {
+        hiddenProjects.classList.add('show');
+        if (button) button.style.display = 'none';
+    }
 });
 
 // Active navigation highlight
@@ -72,3 +81,16 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+// Toggle hidden projects
+function toggleProjects() {
+    const hiddenProjects = document.querySelector('.hidden-projects');
+    const button = document.querySelector('.show-more-btn');
+
+    // 펼치기만 가능 (버튼 숨김)
+    hiddenProjects.classList.add('show');
+    button.style.display = 'none';
+
+    // 펼침 상태 저장
+    localStorage.setItem('projectsExpanded', 'true');
+}
